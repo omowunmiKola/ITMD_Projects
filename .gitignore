@@ -1,0 +1,5 @@
+.venv
+*.XPT
+*.xpt
+.csv
+.DS_Store
