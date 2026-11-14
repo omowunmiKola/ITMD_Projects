@@ -1,5 +1,9 @@
 .venv
 *.XPT
 *.xpt
-.csv
+*.csv
 .DS_Store
+Data_Mining/notebooks/profile.csv
+data/LLCP2025.XPT 
+Data_Mining/notebooks/.ipynb_checkpoints/profile-checkpoint.csv
+data/LLCP2025.XPT 
