@@ -405,7 +405,7 @@ BRFSS_MAP = {
     # ==========================================
     'EDUCA': {
         'type': 'ordinal',
-        'sentinels': {9: 'Refused'},
+        'sentinels': {9: np.nan},
         'skip_pattern': 'Blank is insignificant',
         'decimals': 0,
         'derived_replacement': None,
@@ -414,7 +414,7 @@ BRFSS_MAP = {
     },
     'INCOME3': {
         'type': 'ordinal',
-        'sentinels': {77: 'Not Sure', 99: 'Refused'},
+        'sentinels': {77: np.nan, 99: np.nan},
         'skip_pattern': 'Blank is significant',
         'decimals': 0,
         'derived_replacement': None,
@@ -472,7 +472,7 @@ BRFSS_MAP = {
     },
     'SLEPTIM1': {
         'type': 'continuous',
-        'sentinels': [77,99],
+        'sentinels': {77: np.nan, 99: np.nan},
         'skip_pattern': 'Blank is significant',
         'decimals': 0,
         'derived_replacement': None,

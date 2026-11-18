@@ -1,3 +1,7 @@
+import sys
+sys.path.insert(0, "../src")
+import codebookmap
+
 import pandas as pd
 import numpy as np
 
@@ -5,7 +9,7 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-from src.codebookmap import BRFSS_MAP
+from codebookmap import BRFSS_MAP
 
 
 def make_arm_a(df):  # naive: sentinels left as numbers, mean/mode, no decoding
@@ -77,9 +81,8 @@ def make_arm_b(df):  # forensic: decode, sentinels, indicators, dtypes
             return round((val - 300) / 30.0, 2)
         else:
             return np.nan
-
-        # Pair up the old and new column names and apply the function
-
+            
+    # Pair up the old and new column names and apply the function
     for old_col, new_col in zip(cols_to_process, new_names):
         df[new_col] = df[old_col].apply(decode_brfss_frequency)
 
@@ -118,8 +121,7 @@ def make_arm_b(df):  # forensic: decode, sentinels, indicators, dtypes
             # Apply implied decimals
             if rules["decimals"] > 0:
                 df[col] = df[col] / (10 ** rules["decimals"])
-
-            df[col] = df[col].astype("float32")
+                df[col] = df[col].astype("float32")
 
     nominal_cols = [
         col
