@@ -58,8 +58,6 @@ def make_arm_b(df):  # forensic: decode, sentinels, indicators, dtypes
     ]
     new_names = ["FRUTDA2_", "FTJUDA2_", "GRENDA1_", "FRNCHDA_", "POTADA1_", "VEGEDA2_"]
 
-    df.drop(columns=new_names, inplace=True)
-
     def decode_brfss_frequency(val):
         # Handle missing, "Don't know" (777), and "Refused" (999)
         if pd.isna(val) or val >= 700:
@@ -121,7 +119,7 @@ def make_arm_b(df):  # forensic: decode, sentinels, indicators, dtypes
             # Apply implied decimals
             if rules["decimals"] > 0:
                 df[col] = df[col] / (10 ** rules["decimals"])
-                
+
             df[col] = df[col].astype("float32")
 
     nominal_cols = [
