@@ -1,7 +1,9 @@
 .venv
-*.XPT
+*.XPT 
+'.xpt '
 *.xpt
 *.csv
+.parquet
 .DS_Store
 Data_Mining/notebooks/profile.csv
 data/LLCP2025.XPT 
