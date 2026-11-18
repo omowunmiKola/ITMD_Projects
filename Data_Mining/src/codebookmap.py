@@ -1,3 +1,4 @@
+import numpy as np
 """
 BRFSS Variable Mapping Dictionary
 Defines metadata, sentinel values, and target dtypes for the 57-variable keep list.
@@ -435,7 +436,7 @@ BRFSS_MAP = {
     },
     'CHILDREN': {
         'type': 'continuous',
-        'sentinels': [99],
+        'sentinels': {88: 0, 99: np.nan},
         'skip_pattern': 'Blank is significant',
         'decimals': 0,
         'derived_replacement': None,
@@ -444,7 +445,7 @@ BRFSS_MAP = {
     },
     'PHYSHLTH': {
         'type': 'continuous',
-        'sentinels': [77,99],
+        'sentinels': {88: 0, 77: np.nan, 99: np.nan},
         'skip_pattern': 'Blank is insignificant',
         'decimals': 0,
         'derived_replacement': None,
@@ -453,7 +454,7 @@ BRFSS_MAP = {
     },
     'MENTHLTH': {
         'type': 'continuous',
-        'sentinels': [77,99],
+        'sentinels': {88: 0, 77: np.nan, 99: np.nan},
         'skip_pattern': 'Blank is insignificant',
         'decimals': 0,
         'derived_replacement': None,
