@@ -121,7 +121,8 @@ def make_arm_b(df):  # forensic: decode, sentinels, indicators, dtypes
             # Apply implied decimals
             if rules["decimals"] > 0:
                 df[col] = df[col] / (10 ** rules["decimals"])
-                df[col] = df[col].astype("float32")
+                
+            df[col] = df[col].astype("float32")
 
     nominal_cols = [
         col
