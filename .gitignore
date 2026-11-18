@@ -1,11 +1,10 @@
 .venv
-*.XPT 
-'.xpt '
-*.xpt
+*.XPT
 *.csv
-.parquet
+*.parquet
 .DS_Store
+LLCP2025.XPT 
 Data_Mining/notebooks/profile.csv
 data/LLCP2025.XPT 
 Data_Mining/notebooks/.ipynb_checkpoints/profile-checkpoint.csv
-data/LLCP2025.XPT 
+
