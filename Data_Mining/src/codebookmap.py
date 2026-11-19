@@ -417,7 +417,7 @@ BRFSS_MAP = {
         'sentinels': {77: np.nan, 99: np.nan},
         'skip_pattern': 'Blank is significant',
         'decimals': 0,
-        'derived_replacement': None,
+        'derived_replacement': None
         'pandas_dtype': 'Int8',
         'is_target': False
     },
